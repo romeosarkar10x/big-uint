@@ -1,0 +1,8 @@
+*.s
+*.exe
+*.o
+*.obj
+
+
+
+.vscode
