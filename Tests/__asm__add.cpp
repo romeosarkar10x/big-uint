@@ -34,7 +34,6 @@ int main()
     
     for(u_ll u = 0; u < size__b; u++) { std::cout << a[u] << " "; }
     std::cout << std::endl;
-    // printf("%llu, %llu\n", a[0], a[1]);
 
     // Expected Output: 2 1
   }
@@ -47,9 +46,8 @@ int main()
     
     for(u_ll u = 0; u < size__b; u++) { std::cout << a[u] << " "; }
     std::cout << std::endl;
-    // printf("%llu, %llu\n", a[0], a[1]);
 
-    // Expected Output: 
+    // Expected Output: 6728659617499834544 1 0
   }
 
   return 0;

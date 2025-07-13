@@ -63,7 +63,7 @@ static void __asm__div__u_ll(const volatile u_ll* lhs, const u_ll rhs, const u_l
     
     : 
     : [lhs]"m"(lhs), [rhs]"m"(rhs), [quot]"m"(quot), [size]"m"(size), [rem]"m"(rem)
-    : "%rax", "rcx", "%rdx", "%r8", "%r9", "%r10", "%r11", "%r12"
+    : "cc", "%rax", "rcx", "%rdx", "%r8", "%r9", "%r10", "%r11", "%r12"
   );
 }
 

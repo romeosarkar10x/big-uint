@@ -59,7 +59,7 @@ static void __asm__mul(const volatile u_ll* lhs, const volatile u_ll* rhs, const
       "jnz  .LOOP1"
       : 
       : "m"(lhs), "m"(rhs[u]), "m"(tmp), "m"(size__lhs)
-      : "%rax", "%rcx", "%rdx", "%r8", "%r9", "%r10"
+      : "cc", "%rax", "%rcx", "%rdx", "%r8", "%r9", "%r10"
     );
 
     // std::cout << "before __asm__add\n__asm__mul: " << lhs << " " << rhs << " " << size__lhs << " " << size__rhs << " " << tmp << " " << ans << "\n";

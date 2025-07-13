@@ -12,10 +12,8 @@
 ** rhs[last] == 0,
 ** destination: lhs,
 */
-__attribute__ ((noinline)) static void __asm__add(volatile u_ll* const lhs, const volatile u_ll* const rhs, const u_ll size)
+__attribute__ ((noinline)) static void __asm__add(volatile u_ll* lhs, const volatile u_ll* rhs, u_ll size)
 {
-  
-  /*
   asm(
     "mov  $1, %%al ## initialize carry\n"           
 
@@ -34,11 +32,11 @@ __attribute__ ((noinline)) static void __asm__add(volatile u_ll* const lhs, cons
     
     :
     : [lhs]"r"(lhs), [rhs]"r"(rhs), [size]"r"(size)
-    : "%rax", "%r10"
+    : "cc", "%rax", "%r10"
   );
 
 
-  */
+  /*
 
   asm(
     "movq %0, %%r8\n\t"
@@ -61,6 +59,8 @@ __attribute__ ((noinline)) static void __asm__add(volatile u_ll* const lhs, cons
     : "m"(lhs), "m"(rhs), "m"(size)
     : "%rax", "rcx", "%rdx", "%r8", "%r9"
   );
+
+  */
 }
 
 
