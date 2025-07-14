@@ -1,1 +1,5 @@
 Improper Inline Assembly :: No need to manually allocate registers. The compiler can do it for you.
+
+
+To format all files using clang-format (in windows powershell)
+Get-ChildItem -Path . -Include @("*.cpp", "*.hpp") -Recurse | ForEach-Object { clang-format -i "$(${_}.FullName)" }
